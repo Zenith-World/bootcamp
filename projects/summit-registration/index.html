@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0">
+    <title>Summit Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Recap</a>
+        <a href="#">Sponsors</a>
+        <a href="#">Exhibition</a>
+        <a href="#">Speakers</a>
+        <a href="#" class="active">Register</a>
+        <a href="#">FAQ</a>
+    </nav>
+
+    <!-- MAIN CARD -->
+    <div class="reg-card">
+
+        <!-- EYEBROW -->
+        <p class="eyebrow">
+            Summit Registration
+        </p>
+
+        <!-- HEADING -->
+        <h1>Secure Your Spot</h1>
+
+        <!-- DESCRIPTION -->
+        <p class="description">
+            Registration grants you access to
+            all keynote sessions, workshops,
+            and exhibitions.
+        </p>
+
+        <!-- ============================
+             PRICING ROW
+             Two columns side by side.
+             LEFT  → Early Bird Fee
+             RIGHT → Countdown Timer
+             ============================ -->
+        <div class="two-col">
+
+            <!-- LEFT: Price badge -->
+            <div class="price-badge">
+                EARLY BIRD FEE:
+                <strong>₦7,000</strong>
+            </div>
+
+            <!-- RIGHT: Countdown badge -->
+            <div class="countdown-badge">
+                <span class="countdown-label">
+                    EARLY BIRD ENDS IN:
+                </span>
+                <span id="countdown">
+                    Loading...
+                </span>
+            </div>
+
+        </div>
+
+        <!-- DASHED DIVIDER -->
+        <div class="divider"></div>
+
+        <!-- ============================
+             REGISTRATION FORM
+             ============================ -->
+        <form id="regForm">
+
+            <!-- ========================
+                 ROW 1
+                 LEFT  → First Name
+                 RIGHT → Last Name
+                 ======================== -->
+            <div class="two-col">
+
+                <div class="form-group">
+                    <label class="form-label">
+                        First Name
+                        <span class="required">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        class="form-input"
+                        placeholder="Enter first name"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Last Name
+                        <span class="required">*</span>
+                    </label>
+                    <input
+                        type="text"
+                        class="form-input"
+                        placeholder="Enter last name"
+                        required>
+                </div>
+
+            </div>
+
+            <!-- ========================
+                 ROW 2
+                 LEFT  → Email Address
+                 RIGHT → Phone Number
+                 ======================== -->
+            <div class="two-col">
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Email Address
+                        <span class="required">*</span>
+                    </label>
+                    <input
+                        type="email"
+                        class="form-input"
+                        placeholder="you@example.com"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Phone Number
+                        <span class="required">*</span>
+                    </label>
+                    <!-- Country code + phone joined -->
+                    <div class="phone-group">
+                        <div class="country-code">
+                            +234
+                        </div>
+                        <input
+                            type="tel"
+                            class="form-input"
+                            placeholder="8012345678"
+                            required>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ========================
+                 ROW 3
+                 LEFT  → Company (Optional)
+                 RIGHT → Job Title (Optional)
+                 ======================== -->
+            <div class="two-col">
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Company
+                        <span class="optional">
+                            (Optional)
+                        </span>
+                    </label>
+                    <input
+                        type="text"
+                        class="form-input"
+                        placeholder="Your Company Inc.">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Job Title
+                        <span class="optional">
+                            (Optional)
+                        </span>
+                    </label>
+                    <input
+                        type="text"
+                        class="form-input"
+                        placeholder="e.g. Data Analyst">
+                </div>
+
+            </div>
+
+            <!-- SUBMIT BUTTON — full width -->
+            <button type="submit"
+                    class="btn-submit">
+                Register &amp; Pay ₦7,000
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
