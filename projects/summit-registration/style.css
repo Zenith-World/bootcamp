@@ -1,0 +1,309 @@
+/* RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: white;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* NAVBAR*/
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #222;
+    flex-wrap: wrap;
+}
+
+/* Gradient top line */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        #ff5e3a,
+        #8a2be2
+    );
+}
+
+.navbar a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.navbar a.active {
+    color: #ff9d2f;
+    border-bottom: 2px solid #ff9d2f;
+    padding-bottom: 3px;
+}
+
+/*REGISTRATION CARD*/
+.reg-card {
+    max-width: 720px;
+    margin: 50px auto;
+    padding: 0 24px;
+}
+
+/* EYEBROW
+   Small orange label above the heading.
+
+   ::before creates the orange dash line
+   before the text. No extra HTML needed.*/
+.eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff9d2f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.eyebrow::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: #ff9d2f;
+    flex-shrink: 0;
+}
+
+/* HEADING*/
+h1 {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.description {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+/* TWO COLUMN LAYOUT*/
+.two-col {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: stretch;
+}
+
+/* Every direct child of .two-col
+   gets equal width automatically.
+   This is why left and right columns
+   are always exactly 50/50. */
+.two-col > * {
+    flex: 1;
+}
+
+/* PRICE BADGE*/
+.price-badge {
+    border: 1px solid #ff9d2f;
+    background: rgba(255, 157, 47, 0.08);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff9d2f;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.price-badge strong {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* COUNTDOWN BADGE*/
+.countdown-badge {
+    border: 1px solid #cc2936;
+    background: rgba(204, 41, 54, 0.1);
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #e63946;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.countdown-label {
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+#countdown {
+    font-weight: 800;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* DASHED DIVIDER LINE*/
+.divider {
+    border: none;
+    border-top: 2px dashed #2a2a2a;
+    margin-bottom: 28px;
+}
+
+/* FORM GROUP */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* FORM LABEL */
+.form-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    color: #999;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.required {
+    color: #ff5e3a;
+    margin-left: 2px;
+}
+
+/* Optional text — more faded */
+.optional {
+    color: #666;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+/*FORM INPUT*/
+.form-input {
+    width: 100%;
+    padding: 13px 14px;
+    background: #1c1c1c;
+    border: 1px solid #2e2e2e;
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-input::placeholder {
+    color: #4a4a4a;
+}
+
+.form-input:focus {
+    border-color: #ff9d2f;
+}
+
+.phone-group {
+    display: flex;
+}
+
+.country-code {
+    background: #1c1c1c;
+    border: 1px solid #2e2e2e;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    padding: 13px 12px;
+    color: #aaa;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.phone-group .form-input {
+    border-radius: 0 8px 8px 0;
+}
+
+/* SUBMIT BUTTON */
+.btn-submit {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(
+        to right,
+        #ff9d2f,
+        #ff6b1a
+    );
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 8px;
+    transition: opacity 0.2s,
+                transform 0.1s;
+}
+
+.btn-submit:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/*
+   RESPONSIVE — MOBILE (600px and below)
+   */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .navbar {
+        gap: 16px;
+    }
+
+    /* Stack two-col to single column */
+    .two-col {
+        flex-direction: column;
+    }
+
+    .reg-card {
+        margin: 30px auto;
+    }
+}
